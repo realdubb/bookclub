@@ -1,0 +1,15 @@
+
+
+
+Home
+
+-List of all books posted
+- Search/Filter bar -- narrow list of books by title or class
+- Book - title, class, time posted
+- "Book it" button to request book, receive contact info of seller and send seller notification. 
+
+
+Post - (Popup)
+	fields: title, class name, description, phone number, email -- either or required
+	Post button
+
