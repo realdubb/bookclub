@@ -9,7 +9,7 @@
  * Main module of the application.
  */
 angular
-  .module('mytodoApp', [
+  .module('bookClub', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
@@ -31,7 +31,7 @@ angular
       })
       .when('/post', {
         templateUrl: 'views/post.html',
-        controller: 'fbAuthCtrl'
+        controller: 'PostCtrl'
       })
       .otherwise({
         redirectTo: '/'

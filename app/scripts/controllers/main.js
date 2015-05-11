@@ -1,12 +1,22 @@
 'use strict';
 
+
 /**
  * @ngdoc function
- * @name mytodoApp.controller:MainCtrl
+ * @name mytodoApp.service
  * @description
- * # MainCtrl
+ * # bookService
  * Controller of the mytodoApp
  */
+
+
+/*
+	This function will load sample book data
+	from  app/data/sample.json
+
+	We'll then use the function to create
+	bookService for our controller
+*/
 
 function bookService($http,$q){
 	var deferred = $q.defer();
@@ -22,7 +32,14 @@ function bookService($http,$q){
 }
 
 
-angular.module('mytodoApp')
+/**
+ * @ngdoc function
+ * @name mytodoApp.controller:MainCtrl
+ * @description
+ * # MainCtrl
+ * Controller of the mytodoApp
+ */
+angular.module('bookClub')
 .service("bookService", bookService)
 
   .controller('MainCtrl', function ($scope,bookService) {
@@ -30,18 +47,9 @@ angular.module('mytodoApp')
   	var promise = bookService.getBooks();
   	promise.then(function(data){
   		$scope.books = data.data.books;
-  		console.log($scope.books);
   	})
 
 
     
-    $scope.todos = [ 'Item 1','Item 2','Item 3','item 4' ];
-	$scope.addTodo = function () {
-	  $scope.todos.push($scope.todo);
-	  $scope.todo = '';
-	};
-	$scope.removeTodo = function (index) {
-	  $scope.todos.splice(index, 1);
-	};
 	
   });
