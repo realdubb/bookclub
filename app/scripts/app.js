@@ -16,9 +16,10 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ui.sortable'
+    'ui.sortable',
+    'facebook'
   ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider,FacebookProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -28,7 +29,18 @@ angular
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
       })
+      .when('/post', {
+        templateUrl: 'views/post.html',
+        controller: 'fbAuthCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
-  });
+
+      // Set your appId through the setAppId method or
+     // use the shortcut in the initialize method directly.
+     FacebookProvider.init('938147842916063');
+  }
+
+
+  );

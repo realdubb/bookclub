@@ -2,27 +2,31 @@
   "books": [
     {
       "id": 1,
+      "title": "Probability 506",
       "class": "CS-394",
       "descritption": "in good condition",
-      "posted_time" : "2015-05-09T17:02:22.893Z"
+      "posted_time" : "2015-05-03T17:02:22.893Z"
     },
     {
       "id": 2,
-      "class": "CS-394",
+      "title": "C++ Intro",
+      "class": "CS-201",
       "descritption": "in good condition",
-      "posted_time" : "2015-05-09T17:02:22.893Z"
+      "posted_time" : "2015-05-02T17:02:22.893Z"
     },
     {
       "id": 3,
-      "class": "CS-394",
+      "title": "Circuits and Breakers",
+      "class": "EE-104",
       "descritption": "in good condition",
-      "posted_time" : "2015-05-09T17:02:22.893Z"
+      "posted_time" : "2015-05-04T17:02:22.893Z"
     },
     {
       "id": 4,
-      "class": "CS-394",
+      "title": "Questionable Humanity",
+      "class": "QQ-123",
       "descritption": "in good condition",
-      "posted_time" : "2015-05-09T17:02:22.893Z"
+      "posted_time" : "2015-05-05T17:02:22.893Z"
     }
   ]
 }
