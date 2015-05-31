@@ -4,7 +4,7 @@
           <md-card-content>
            <md-input-container>
              <label> Filter by class number </label>
-               <input type="text">
+               <input type="text" ng-model="searchFilter.classNo">
             </md-input-container>
           </md-card-content>
         </md-card>
@@ -12,12 +12,30 @@
 
 <div layout="row">
       <md-card flex="90" offset="5">
+        <md-toolbar class="md-accent">
+        <div layout="row">
+            <md-list-item>
+              <div flex="15"> Class No.</div><div flex="25"> Title</div><div flex="15"> Price</div>
+            <div flex="15"> Condition</div><div>Date Posted</div>
+          </md-list-item>
+        </div>
+        </md-toolbar>
         <md-card-content>
-          <md-list ng-repeat="book in books">
-              {{book.name}}
-            </md-list>
+          <md-list-item class="md-3-line" ng-repeat="book in books | filter: searchFilter">
+           <div class="md-list-item-text">
+              <div layout="row">
+                <div class="centerVert" flex="15"> {{book.classNo}}</div>
+                <div class="centerVert" f flex="25"> {{book.name}}</div>
+                <div class="centerVert" flex="15"> {{book.price | currency: $}}</div>
+                <div class="centerVert" flex="15"> {{book.condition}}</div>
+                <div class="centerVert" flex="15"> {{book.date}}</div>
+                <md-button flex="10" href="#/bookDetails/{{book.id}}" class="md-raised md-accent md-hue-2">book It!</md-button>
+           </div>
+         </md-list-item>
         </md-card-content>
       </md-card>
 </div>
+
+
 
 </md-content>

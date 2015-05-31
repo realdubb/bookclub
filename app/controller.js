@@ -4,4 +4,8 @@ angular.module( 'bookClub.controller', [] )
   $scope.books = Books.all();
 })
 
+.controller('bookDetailsCtrl',function($scope,$stateParams,Books){
+  $scope.book = Books.get($stateParams.bookId);
+})
+
 ;//end of module
