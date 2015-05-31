@@ -1,0 +1,23 @@
+<md-content>
+  <div layout="row">
+        <md-card flex="90" offset="5">
+          <md-card-content>
+           <md-input-container>
+             <label> Filter by class number </label>
+               <input type="text">
+            </md-input-container>
+          </md-card-content>
+        </md-card>
+</div>
+
+<div layout="row">
+      <md-card flex="90" offset="5">
+        <md-card-content>
+          <md-list ng-repeat="book in books">
+              {{book.name}}
+            </md-list>
+        </md-card-content>
+      </md-card>
+</div>
+
+</md-content>
